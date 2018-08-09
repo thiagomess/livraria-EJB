@@ -3,10 +3,16 @@ package br.com.caelum.livraria.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+
 import br.com.caelum.livraria.modelo.Autor;
 import br.com.caelum.livraria.modelo.Livro;
 import br.com.caelum.livraria.modelo.Usuario;
 
+@Singleton //Diferente do @Stateless, ele irá criar apenas uma instancia no servidor
+@Startup //Defini que o Singleton Bean será startado desde o início da aplicação
 public class Banco {
 	
 	public static List<Livro> livros = new ArrayList<Livro>();
@@ -14,6 +20,11 @@ public class Banco {
 	public static List<Usuario> usuarios = new ArrayList<Usuario>();
 	
 	private static int chave = 1;
+	
+	@PostConstruct // Assim que o EJB Container cria e inicializa o Session Bean este metodo é executado
+	void aposCriacao() {
+		System.out.println("Criou o banco");
+	}
 	
 	static {
 		inicializaBanco();
