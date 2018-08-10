@@ -1,19 +1,23 @@
 package br.com.caelum.livraria.login;
 
-import javax.enterprise.inject.Model;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import br.com.caelum.livraria.bean.MenuBean;
 import br.com.caelum.livraria.dao.UsuarioDao;
 import br.com.caelum.livraria.modelo.Usuario;
 
-@Model
+@Named
+@RequestScoped // todos os objetos armazenados no escopo request, sobrevivem apenas a uma submissão ao ciclo de vida do JSF
 public class LoginBean {
 	
 	private Usuario usuario = new Usuario();
-	private UsuarioDao dao = new UsuarioDao();
+	
+	@Inject //Adicionado Inject
+	private UsuarioDao dao;
 	
 	@Inject
 	UsuarioLogadoBean usuarioLogado;
