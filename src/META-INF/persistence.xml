@@ -8,7 +8,7 @@
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 	
-		<jta-data-source>java:/livrariaDS</jta-data-source>
+		<jta-data-source>java:/livrariaDS</jta-data-source> <!-- Este é o responsavel por gerenciar as transações do JPA  -->
 		
 		<class>br.com.caelum.livraria.modelo.Autor</class>
 		<class>br.com.caelum.livraria.modelo.Livro</class>
