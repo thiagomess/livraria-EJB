@@ -43,7 +43,11 @@ public class AutorDao {
 		
 		manager.persist(autor); //Adicionando na tabela com JPA
 		
+		
 		System.out.println("Salvou o autor " + autor.getNome());
+		
+		//Chamada ao service externo que gera um erro. Desse jeito acontece um rollback e não é salvo no Banco
+//		throw new RuntimeException("");
 	}
 	
 	public List<Autor> todosAutores() {

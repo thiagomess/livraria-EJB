@@ -20,7 +20,7 @@ public class AutorBean {
 		return autor;
 	}
 	
-	public void cadastra() {
+	public void cadastra() throws LivrariaException {
 		this.service.adiciona(autor);
 		this.autor = new Autor();
 	}
