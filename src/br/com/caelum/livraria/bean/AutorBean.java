@@ -5,8 +5,8 @@ import java.util.List;
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 
-import br.com.caelum.livraria.dao.AutorService;
 import br.com.caelum.livraria.modelo.Autor;
+import br.com.caelum.livraria.service.AutorService;
 
 @Model
 public class AutorBean {

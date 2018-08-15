@@ -15,6 +15,7 @@ import br.com.caelum.livraria.modelo.Autor;
 
 @Stateless //Criamos o session bean, onde sera mapeado pelo JNDI
 @TransactionManagement(TransactionManagementType.CONTAINER) //Apenas para fim didatico, pois já é o padrao
+//@Interceptors({LogInterceptor.class}) //Define a classe interceptadora, ou pode se usar o xml, que fica no WebContent chamado ejb-jar.xml
 public class AutorDao {
 
 	@PersistenceContext //Como o EJB Container administrará o JPA, é preciso usar uma anotação especifica do mundo EJB

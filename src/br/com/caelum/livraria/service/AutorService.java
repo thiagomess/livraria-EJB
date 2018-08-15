@@ -1,4 +1,4 @@
-package br.com.caelum.livraria.dao;
+package br.com.caelum.livraria.service;
 
 import java.util.List;
 
@@ -6,6 +6,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 
 import br.com.caelum.livraria.bean.LivrariaException;
+import br.com.caelum.livraria.dao.AutorDao;
 import br.com.caelum.livraria.modelo.Autor;
 
 // o Bean recebe as chamadas da tela e delega para o Service, que por sua vez abre a transação e delega para o DAO que 
@@ -29,4 +30,9 @@ public class AutorService {
 		return dao.todosAutores();
 	}
 
+	public Autor buscaPelaId(Integer autorId) {
+		return dao.buscaPelaId(autorId);
+	}
+
+	
 }

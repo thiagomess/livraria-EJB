@@ -16,7 +16,7 @@ public class LoginBean {
 	
 	private Usuario usuario = new Usuario();
 	
-	@Inject //Adicionado Inject
+	@Inject //É passado a administração para o EJB Containeir, por isso nao se instancia mais o DAO.(injeção de dependencia)
 	private UsuarioDao dao;
 	
 	@Inject
