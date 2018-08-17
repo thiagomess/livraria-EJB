@@ -45,6 +45,9 @@
 	        <p:column headerText="Autor">
 	            <h:outputText value="#{livro.autor.nome}" />
 	        </p:column>
+	       	<p:column headerText="Remover" style="text-align: center;">
+	            <h:commandLink style="color:red" value="X" action="#{livroBean.remove(livro)}"/>
+	        </p:column>
 	
 	    </p:dataTable>
 	</h:form>

@@ -20,4 +20,9 @@ public class LivroService {
 	public List<Livro> todosLivros() {
 		return dao.todosLivros();
 	}
+
+	public void remove(Livro livroId) {
+		dao.remove(livroId);
+	}
+
 }

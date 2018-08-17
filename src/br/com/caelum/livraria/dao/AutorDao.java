@@ -59,5 +59,13 @@ public class AutorDao {
 		Autor autor = this.manager.find(Autor.class, autorId); //Efetua a busca do autor pelo ID
 		return autor;
 	}
+
+	public void remove(Autor autor) {
+		
+			Autor find = manager.find(Autor.class, autor.getId());
+			manager.remove(find);
+			
+		
+	}
 	
 }

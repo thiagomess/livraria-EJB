@@ -3,6 +3,8 @@ package br.com.caelum.livraria.bean;
 import java.util.List;
 
 import javax.enterprise.inject.Model;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 
 import br.com.caelum.livraria.modelo.Autor;
@@ -29,6 +31,15 @@ public class LivroBean {
 		this.livroService.adiciona(livro);
 		
 		this.livro = new Livro();
+	}
+	
+	public void remove(Livro livro) {
+		
+		this.livroService.remove(livro);
+		
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, 
+				"Livro removido com sucesso", ""));
+		
 	}
 
 	public List<Autor> getAutores() {

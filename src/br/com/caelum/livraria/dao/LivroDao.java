@@ -34,4 +34,11 @@ public class LivroDao {
 		return query.getResultList();
 	}
 
+	public void remove(Livro livro) {
+		Livro find = manager.find(Livro.class, livro.getId());
+		manager.remove(find);
+	
+	}
+
+
 }

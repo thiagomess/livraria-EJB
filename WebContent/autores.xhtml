@@ -30,7 +30,10 @@
 			<h3>Autores</h3>
 			
 			<p:dataList id="autores" value="#{autorBean.autores}" var="autor" itemType="disc">
+				
 				#{autor.nome}
+				<h:commandLink style="color: red" value="  X"  immediate="true" action="#{autorBean.remove(autor)}" />
+				
 			</p:dataList>
 		
 		</h:form>

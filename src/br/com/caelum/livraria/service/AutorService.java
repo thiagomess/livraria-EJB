@@ -34,5 +34,16 @@ public class AutorService {
 		return dao.buscaPelaId(autorId);
 	}
 
+	public void remove(Autor autor) {
+
+			dao.remove(autor);
+			
+
+	}
+
+	
+	
+	
+	
 	
 }
