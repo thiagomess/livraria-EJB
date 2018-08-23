@@ -37,7 +37,7 @@ public class AutorBean {
 			
 		} catch (Exception e) {
 			
-			mensagem = "Não é possível excluir um autor com um livro vinculado";
+			mensagem = "Não é possível excluir autor com um livro vinculado";
 			tipoErro = FacesMessage.SEVERITY_ERROR;
 		}
 		
