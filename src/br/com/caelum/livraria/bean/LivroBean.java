@@ -12,7 +12,8 @@ import br.com.caelum.livraria.modelo.Livro;
 import br.com.caelum.livraria.service.AutorService;
 import br.com.caelum.livraria.service.LivroService;
 
-@Model
+//Anotação Model é um estereotipo e possui a @Named e outras anotações embutidas. 
+@Model //https://docs.oracle.com/javaee/7/api/javax/enterprise/inject/Model.html
 public class LivroBean {
 	
 	private Livro livro = new Livro();

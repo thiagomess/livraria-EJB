@@ -11,7 +11,8 @@ import javax.inject.Inject;
 import br.com.caelum.livraria.modelo.Autor;
 import br.com.caelum.livraria.service.AutorService;
 
-@Model
+//Anotação Model é um estereotipo e possui a @Named e outras anotações embutidas. 
+@Model //https://docs.oracle.com/javaee/7/api/javax/enterprise/inject/Model.html
 public class AutorBean {
 	
 	private Autor autor = new Autor();
