@@ -33,17 +33,18 @@ Dentro da pasta com criaremos uma nova pasta mysql e dentro dela uma pasta main.
 o arquivo modules.XML e o JAR (hierarquia final das pastas: jboss/modules/com/mysql/main)
 
 O arquivo modules.xml deve conter o seguinte texto:
-<?xml version="1.0" encoding="UTF-8"?>
- 
-<module xmlns="urn:jboss:module:1.0" name="com.mysql">
-  <resources>
-    <resource-root path="mysql-connector-java-5.1.24-bin.jar"/>
-  </resources>
-  <dependencies>
-    <module name="javax.api"/>
-  </dependencies>
-</module>
 
+        <?xml version="1.0" encoding="UTF-8"?>
+
+        <module xmlns="urn:jboss:module:1.0" name="com.mysql">
+          <resources>
+            <resource-root
+              path="mysql-connector-java-5.1.24-bin.jar" />
+          </resources>
+          <dependencies>
+            <module name="javax.api" />
+          </dependencies>
+        </module> 
 o arquivo jar é o mysql-connector-java-5.1.24-bin.jar
 
 4. Deve ser criado o database "livraria"
