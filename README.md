@@ -53,4 +53,4 @@ o arquivo jar é o mysql-connector-java-5.1.24-bin.jar
 
 EJB: O poder da Java EE
 
-https://cursos.alura.com.br/user/thiagogomes19/course/ejb/certificate
+https://cursos.alura.com.br/certificate/dbb9cad3-80ef-4989-8165-16f921b49ce6
