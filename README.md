@@ -48,3 +48,9 @@ O arquivo modules.xml deve conter o seguinte texto:
 o arquivo jar é o mysql-connector-java-5.1.24-bin.jar
 
 4. Deve ser criado o database "livraria"
+
+# Certificado Alura
+
+EJB: O poder da Java EE
+
+https://cursos.alura.com.br/user/thiagogomes19/course/ejb/certificate
